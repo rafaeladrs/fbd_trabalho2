@@ -232,7 +232,7 @@ class Inventario:
             self.treeview.heading("Valor Depreciado", text="Valor Depreciado")
             self.treeview.heading("Número Nota Fiscal", text="Número Nota Fiscal")
             self.treeview.heading("Número Série", text="Número Série")
-            self.treeview.heading("Setores", text="Setores")  # Corrigido de "Setor" para "Setores"
+            self.treeview.heading("Setores", text="Setores") 
 
             for equipamento in equipamentos:
                 self.treeview.insert("", "end", values=equipamento)
@@ -599,7 +599,6 @@ class Inventario:
         salas_listbox = tk.Listbox(editar_window, selectmode=tk.MULTIPLE, height=5)
         salas_listbox.grid(row=2, column=1, padx=10, pady=5)
 
-        # Carregar as salas associadas ao setor
         self.carregar_salas_associadas(id_setor, salas_listbox)
 
         def carregar_salas_associadas(id_setor, listbox):
